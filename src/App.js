@@ -2,55 +2,54 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  // Properties
   const [showResults, setShowResults] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
 
   const questions = [
     {
-      text: "What is the capital of America?",
+      text: "What is the capital of Ukraine?",
       options: [
-        { id: 0, text: "New York City", isCorrect: false },
-        { id: 1, text: "Boston", isCorrect: false },
-        { id: 2, text: "Santa Fe", isCorrect: false },
-        { id: 3, text: "Washington DC", isCorrect: true },
+        { id: 0, text: "Lviv", isCorrect: false },
+        { id: 1, text: "Odessa", isCorrect: false },
+        { id: 2, text: "Kiev", isCorrect: false },
+        { id: 3, text: "Kyiv", isCorrect: true },
       ],
     },
     {
-      text: "What year was the Constitution of America written?",
+      text: "What country is not borderring the Ukraine?",
       options: [
-        { id: 0, text: "1787", isCorrect: true },
-        { id: 1, text: "1776", isCorrect: false },
-        { id: 2, text: "1774", isCorrect: false },
-        { id: 3, text: "1826", isCorrect: false },
+        { id: 0, text: "Lithuania", isCorrect: true },
+        { id: 1, text: "Romania", isCorrect: false },
+        { id: 2, text: "Slovakia", isCorrect: false },
+        { id: 3, text: "Hungary", isCorrect: false },
       ],
     },
     {
-      text: "Who was the second president of the US?",
+      text: "How to say “hi” in Ukrainian?",
       options: [
-        { id: 0, text: "John Adams", isCorrect: true },
-        { id: 1, text: "Paul Revere", isCorrect: false },
-        { id: 2, text: "Thomas Jefferson", isCorrect: false },
-        { id: 3, text: "Benjamin Franklin", isCorrect: false },
+        { id: 0, text: "Pryvit", isCorrect: true },
+        { id: 1, text: "Hai", isCorrect: false },
+        { id: 2, text: "Dopobachennia", isCorrect: false },
+        { id: 3, text: "Papa", isCorrect: false },
       ],
     },
     {
-      text: "What is the largest state in the US?",
+      text: "What is Official language in Ukraine?",
       options: [
-        { id: 0, text: "California", isCorrect: false },
-        { id: 1, text: "Alaska", isCorrect: true },
-        { id: 2, text: "Texas", isCorrect: false },
-        { id: 3, text: "Montana", isCorrect: false },
+        { id: 0, text: "Polish", isCorrect: false },
+        { id: 1, text: "Ukrainian", isCorrect: true },
+        { id: 2, text: "Spanish", isCorrect: false },
+        { id: 3, text: "English", isCorrect: false },
       ],
     },
     {
-      text: "Which of the following countries DO NOT border the US?",
+      text: "Which of the following cities or towns in Ukraine is the smallest?",
       options: [
-        { id: 0, text: "Canada", isCorrect: false },
-        { id: 1, text: "Russia", isCorrect: true },
-        { id: 2, text: "Cuba", isCorrect: true },
-        { id: 3, text: "Mexico", isCorrect: false },
+        { id: 0, text: "Poltava", isCorrect: false },
+        { id: 1, text: "Cherkasy", isCorrect: true },
+        { id: 2, text: "Khesrson", isCorrect: false },
+        { id: 3, text: "Lviv", isCorrect: false },
       ],
     },
   ];
@@ -75,11 +74,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1>USA Quiz 🇺🇸</h1>
-      <h2>Score: {score}</h2>
+      <h1>Quiz</h1>
+
       {showResults ? (
-        /* 4. Final Results */
         <div className="final-results">
+          <h2>Score: {score}</h2>
           <h1>Final Results</h1>
           <h2>
             {score} out of {questions.length} correct - (
